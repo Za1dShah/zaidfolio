@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 50px;
+    width: 100%;
+    padding: 0 8%;
+    background: whitesmoke;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-name{
+
+}
+.nav-links{
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav-links li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+}
