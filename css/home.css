@@ -1,28 +1,24 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-
+    overflow: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-.btn {
+/* .btn {
     display: inline-block;
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .btn:hover {
     background-color: #0056b3;
-}
+} */
 
 /* Header Styles */
 header {
@@ -30,6 +26,14 @@ header {
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 49%;
+    border-bottom-right-radius: 49%;
+}
+
+header a {
+    text-decoration: none;
+    color: #020202;
 }
 
 nav ul {
@@ -38,11 +42,12 @@ nav ul {
     justify-content: center;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 nav li {
     margin: 0 30px;
-    font-weight: bold;
+    text-decoration: none;
 }
 
 /* Hero Section Styles */
@@ -60,6 +65,7 @@ nav li {
 .hero-content {
     max-width: 800px;
     padding: 0 20px;
+    text-align: left;
 }
 
 .hero h1 {
@@ -70,6 +76,14 @@ nav li {
 .hero p {
     font-size: 24px;
     margin-bottom: 40px;
+}
+
+.hero .me {
+    width: 400px;
+    height: 510px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0px 0px;
 }
 
 /* About Section Styles */
@@ -138,4 +152,99 @@ footer p {
     margin-top: 20px;
     font-size: 14px;
     color: #666;
+}
+
+/* Mode Toggle Button Styles */
+.mode-toggle {
+    position: fixed;
+    top: 7px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mode-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+}
+
+.night-mode .light-mode-icon,
+.light-mode .night-mode-icon {
+    display: none;
+}
+
+/* Night Mode Styles */
+body.night-mode {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+}
+
+/* Night Header Styles */
+body.night-mode header {
+    background-color: #454545;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+}
+
+body.night-mode header a {
+    text-decoration: none;
+    color: #c4c4c4;
+}
+
+body.night-mode nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+}
+
+body.night-mode nav li {
+    margin: 0 30px;
+    text-decoration: none;
+}
+
+/* Night Hero Section Styles */
+body.night-mode .hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c4c4c4;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.hero h2 {
+    font-size: 29px;
+
+    background: -webkit-linear-gradient(83deg,#ff6666, #f4ff56);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 100;
 }
