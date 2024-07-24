@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../css/home.css" />
   </head>
   <body>
+  <div >
     <!-- header Section -->
-    <header>
+    <header class="fade">
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#hero">About</a></li>
+          <li><a href="#skill">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -32,24 +33,49 @@
     </header>
     <!-- hero Section -->
     <main>
-      <section class="hero">
+      <div class="fade">
+      <section class="hero" id="hero">
         <div class="hero-content">
           <h1>Zaid Baig</h1>
           <h2>Full Stack Developer</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat dictum eros, eu viverra est malesuada nec. Proin tempor molestie erat, in bibendum est euismod et. Nulla sollicitudin dolor sed dignissim tincidunt. Nullam mollis ex non lobortis condimentum. Nullam ullamcorper, elit non luctus imperdiet, odio velit fringilla urna, ut consectetur justo velit ac augue. Proin pellentesque libero vel enim scelerisque, quis feugiat felis consectetur. Phasellus porta nulla lectus, id condimentum nunc fringilla vitae. Proin molestie porttitor erat, blandit blandit tellus semper eget. Maecenas</p>
-          <!-- <a href="#contact" class="btn">Get in Touch</a> -->
         </div>
         <img src="../images/me.jpg" alt="me" class="hero-content me" />
       </section>
-
-      <!-- About Section -->
+      </div>
 
       <!-- Skills Section -->
-
+      <div class="fade">
+      <section class="skill" id="skill">
+        <div class="skills-container">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="skill-icon-1" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon-2" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="skill-icon-1" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="SQL" class="skill-icon-2" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" class="skill-icon-1" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" class="skill-icon-2" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-icon-1" />
+          <img src="../images/R.png" alt="R" class="skill-icon-2" />
+        </div>
+      </section>
+      </div>
       <!-- Projects Section -->
+      <div class="fade">
+      <section class="projects" id="projects">
+        <div id="container">
+            <div class="photobanner">
+              <img src="../images/black.png" alt="">
+              <img src="../images/black.png" alt="">
+              <img src="../images/black.png" alt="">
+              <img src="../images/black.png" alt="">
+              <img src="../images/black.png" alt="">
+            </div>
+        </div>
+      </section>
+      </div>
 
       <!-- Contact Section -->
-      <!-- Needs design fixing -->
+      <div class="fade"></div> 
       <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <form>
@@ -59,6 +85,7 @@
           <button type="submit" class="btn">Submit</button>
         </form>
       </section>
+      </div>
     </main>
 
     <footer>
@@ -72,6 +99,9 @@
       </div>
       <p>&copy; 2024 Zaid Shah. All rights reserved.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/Main.js"></script>
+    </div>
   </body>
 </html>
