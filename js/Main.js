@@ -50,3 +50,7 @@ $(document).ready(function(){
   });
 });
 });
+
+document.querySelector('.mode-toggle').addEventListener('click', function() {
+    document.querySelector('nav ul').classList.toggle('active');
+});

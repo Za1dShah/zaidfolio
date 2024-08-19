@@ -1,46 +1,24 @@
 /* Global Styles */
-body {
+body,
+html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    scrollbar-width:none
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
-/* Hide scrollbar for Chrome, Safari, and Opera */
 body::-webkit-scrollbar {
     display: none;
 }
 
 /* Hide scrollbar for IE, Edge, and Firefox */
-body, .photobanner {
+body,
+.photobanner {
     -ms-overflow-style: none;
     /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
 }
-
-/* Ensure content is scrollable */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    overflow: auto;
-}
-
-
-/* .btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-} */
 
 /* Header Styles */
 header {
@@ -48,7 +26,6 @@ header {
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    text-decoration: none;
     border-bottom-left-radius: 49%;
     border-bottom-right-radius: 49%;
 }
@@ -64,30 +41,13 @@ nav ul {
     justify-content: center;
     margin: 0;
     padding: 0;
-    text-decoration: none;
 }
 
 nav li {
     margin: 0 30px;
-    text-decoration: none;
 }
 
 /* Hero Section Styles */
-/* Define the fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
 .hero {
     height: 100vh;
     background-size: cover;
@@ -100,99 +60,61 @@ nav li {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 50vh;
     padding: 0 20px;
     text-align: left;
     animation: fadeIn 2s ease-out;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.hero h1,
+.hero h2,
+.hero p {
+    position: relative;
+    left: -20vh;
+    top: 10vh;
 }
 
-.hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
+.hero h1 {
+    font-size: 8px;
+    margin-bottom: 20px;
 }
 
 .hero .me {
     width: 400px;
+    max-width: 100%;
     height: 510px;
+    position: relative;
+    left: 12vh;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 0px 0px;
 }
+
 /* Skills Section Styles */
-
-.skill {
-    height: 50vh;
+#skill {
+    height: 100vh;
+    text-align: center;
 }
 
-/* Skills Section */
-#skill {
-    height: 20vh;
-    text-align: center;
-    padding: 50px 20px;
+.skill h1 {
+    font-size: 80px;
+    font-weight: 100;
+    position: relative;
+    top: 300px;
 }
 
 .skills-container {
     position: relative;
-    top: 30px;
+    top: 400px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
 }
 
-.skill-icon-1 {
+.skill-icon-1,
+.skill-icon-2 {
     width: 100px;
     height: 100px;
-}
-
-.skill-icon-2 {
-    position: relative;
-    top: -10px;
-    width: 100px;
-    height: 100px;
-}
-
-/* Bobbing Animation */
-@keyframes wave1{
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY();
-    }
-}
-
-@keyframes wave2 {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.skill-icon-1 {
-    animation: wave1 4.2s ease-in-out infinite;
-    border-radius: 8px;
-}
-
-.skill-icon-2 {
-    animation: wave2 4.2s ease-in-out infinite;
     border-radius: 8px;
 }
 
@@ -200,13 +122,22 @@ nav li {
 .projects {
     height: 100vh;
 }
+
+.projects h1 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    position: relative;
+    top: 190px;
+}
+
 .projects .photobanner {
     position: relative;
-    top: 200px;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
     border-radius: 10px;
+    top: 240px;
 }
 
 .photobanner img {
@@ -217,7 +148,7 @@ nav li {
 
 /* Contact Section Styles */
 .contact {
-    height: 50vh;
+    height: 100vh;
     padding: 80px 20px;
     text-align: center;
 }
@@ -243,6 +174,10 @@ nav li {
     width: 200px;
 }
 
+.contact h2 {
+    font-weight: 100;
+}
+
 /* Footer Styles */
 footer {
     background-color: #f8f9fa;
@@ -251,10 +186,13 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer nav ul {
+footer nav ul,
+footer .social-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 footer nav li {
@@ -262,8 +200,6 @@ footer nav li {
 }
 
 footer .social-icons {
-    display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -301,39 +237,25 @@ footer p {
 
 /* Night Mode Styles */
 body.night-mode {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #202020;
 }
 
 /* Night Header Styles */
 body.night-mode header {
     background-color: #242424;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    text-decoration: none;
 }
 
 body.night-mode header a {
-    text-decoration: none;
     color: #c4c4c4;
 }
 
-body.night-mode nav ul {
+body.night-mode nav ul,
+body.night-mode nav li {
     list-style-type: none;
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    
-}
-
-body.night-mode nav li {
-    margin: 0 30px;
-    text-decoration: none;
 }
 
 /* Night Hero Section Styles */
@@ -348,27 +270,110 @@ body.night-mode .hero {
     text-align: center;
 }
 
-.hero-content {
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.hero h1 {
+body.night-mode .hero h1 {
     font-size: 60px;
     margin-bottom: 20px;
     font-weight: 100;
 }
 
-.hero h2 {
+body.night-mode .hero h2 {
     font-size: 29px;
-
-    background: -webkit-linear-gradient(83deg,#ff6666, #f4ff56);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(83deg, #ff6666, #f4ff56);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
+body.night-mode .contact input,
+body.night-mode .contact textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #838383;
+    border-radius: 5px;
+    background-color: #242424;
+}
+
+body.night-mode .contact h2 {
+    color: #c4c4c4;
     font-weight: 100;
+}
+
+body.night-mode footer {
+    background-color: #242424;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Utility Classes */
+.cv {
+    width: 50px;
+    left: 10px;
+    top: 94vh;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.2s;
+    animation: cvbouncy 3s infinite linear;
+}
+
+.cv:hover {
+    background-color: white;
+    color: #000000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wave1 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes wave2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes cvbouncy {
+
+    0%,
+    40%,
+    50%,
+    80%,
+    100% {
+        top: 94vh;
+    }
+
+    43%,
+    53% {
+        top: 93.5vh;
+    }
+
+    46%,
+    56% {
+        top: 93.8vh;
+    }
 }
